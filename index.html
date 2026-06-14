@@ -1,1 +1,310 @@
-Hello!
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <!-- # css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body { margin: 0; font-family: 'Pretendard', -apple-system, sans-serif; color: #1A1416; background: #FFFFFF; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a { text-decoration: none; color: inherit; }
+::selection { background: #FBD3DD; color: #1A1416; }
+  </style>
+</helmet>
+
+<!-- # 네비게이션 바 -->
+<nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 4vw, 48px); background: rgba(255,255,255,0.82); backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid #F1E5E9;">
+  <a href="#home" style="display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; white-space: nowrap;">
+    <span style="width: 8px; height: 8px; border-radius: 50%; background: #E0607C; display: inline-block;"></span>
+    이채림
+  </a>
+  <div style="display: flex; align-items: center; gap: clamp(14px, 2vw, 30px);">
+    <a href="#about" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">About</a>
+    <a href="#projects" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Projects</a>
+    <a href="#publications" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Publications</a>
+    <a href="#awards" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Awards</a>
+    <a href="#activities" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Activities</a>
+    <a href="#education" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Education</a>
+    <a href="#certificates" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #6B5F64;" style-hover="color: #E0607C;">Certificates</a>
+    <a href="#contact" style="display: inline-flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #FFFFFF; background: #1A1416; padding: 9px 16px; border-radius: 100px;" style-hover="background: #E0607C;">Contact</a>
+  </div>
+</nav>
+
+<main style="padding-top: 64px;">
+
+  <!-- # 홈 (메인 화면) -->
+  <section id="home" style="padding: clamp(80px, 13vh, 150px) 0 clamp(80px, 12vh, 120px); background: linear-gradient(180deg, #FFF6F8 0%, #FFFFFF 100%);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <h1 style="margin: 28px 0 0; font-size: clamp(56px, 11.5vw, 152px); font-weight: 800; line-height: 0.9; letter-spacing: -0.045em;">이채림</h1>
+      <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px; margin-top: 26px;">
+        <span style="font-size: clamp(22px, 3vw, 38px); font-weight: 600; letter-spacing: -0.02em;"><span style="color: #E0607C;">Backend</span> Engineer</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #9A8D92;">Chaelim Lee</span>
+      </div>
+      <p style="max-width: 620px; margin: 36px 0 0; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.75; color: #5C5358; text-wrap: pretty;">사용자에게 필요한 기능을 안정적인 서비스로 구현하는 백엔드 개발자를 지향합니다.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 44px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #6B5F64;">
+        <span>📍 Seoul, KR</span>
+        <span style="color: #D9C7CD;">/</span>
+        <span style="color: #E0607C;">● Available for work</span>
+        <span style="color: #D9C7CD;">/</span>
+        <a href="/cdn-cgi/l/email-protection#deb6bbb2b2b19ebba6bfb3aeb2bbf0bdb1b3" style="border-bottom: 1px solid #E7D5DB;" style-hover="color: #E0607C; border-color: #E0607C;"><span class="__cf_email__" data-cfemail="2b434e4747446b4e534a465b474e05484446">[chaelim.lee00@gmail.com]</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 소개 -->
+  <section id="about" style="padding: clamp(90px, 11vh, 130px) 0; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">01 / About</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">소개</h2>
+        <div style="height: 1px; background: #EEE2E6; margin-top: 28px;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 56px;">
+        <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); align-items: start;">
+          <div style="font-size: clamp(20px, 2.2vw, 28px); line-height: 1.6; font-weight: 500; letter-spacing: -0.01em; color: #2A2226; text-wrap: pretty;">
+            안녕하세요, 더 나은 방법을 고민하고 끝까지 구현해 내는 개발자 이채림입니다. 작은 불편도 그냥 지나치지 않고, 기술로 풀어내는 과정에서 가장 큰 즐거움을 느낍니다.
+          </div>
+          <div style="font-size: 16px; line-height: 1.8; color: #5C5358;">
+            <p style="margin: 0 0 18px;">여러 프로젝트에서 웹 서비스의 기획부터 구현과 배포까지 경험하며, 서비스의 중심을 안정적으로 지탱하는 백엔드 개발에 관심을 갖게 되었습니다. 현재는 Java와 Python을 중심으로 REST API, 데이터베이스를 공부하고 있습니다.</p>
+            <p style="margin: 0;">모르는 것은 빠르게 배우고, 아는 것은 명확하게 나누는 협업을 좋아합니다. 다양한 관점을 열린 태도로 받아들이며 함께 성장할 수 있는 개발자가 되고자 합니다.</p>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: #EEE2E6; border: 1px solid #EEE2E6;">
+          <div style="background: #FFFFFF; padding: 28px 26px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #B79FA7; margin-bottom: 14px;">Interest</div>
+            <div style="font-size: 17px; font-weight: 600; line-height: 1.45;">안정적인 백엔드<br>서비스 개발</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 28px 26px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #B79FA7; margin-bottom: 14px;">Approach</div>
+            <div style="font-size: 17px; font-weight: 600; line-height: 1.45;">사용자 중심의<br>문제 해결</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 28px 26px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #B79FA7; margin-bottom: 14px;">Learning</div>
+            <div style="font-size: 17px; font-weight: 600; line-height: 1.45;">Java · Python<br>REST API · SQL<br>DOCKER · AWS</div>
+          </div>
+          <div style="background: #FFFFFF; padding: 28px 26px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #B79FA7; margin-bottom: 14px;">Value</div>
+            <div style="font-size: 17px; font-weight: 600; line-height: 1.45;">꾸준한 학습<br>&amp; 열린 협업</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 프로젝트 -->
+  <section id="projects" style="padding: clamp(90px, 11vh, 130px) 0; background: #FFF6F8; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">02 / Projects</div>
+        <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+          <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">프로젝트</h2>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #B79FA7;">카드를 누르면 링크로 이동합니다</span>
+        </div>
+        <div style="height: 1px; background: #F0DEE4; margin-top: 28px;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px;">
+        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+          <a href="{{ p.link }}" target="_blank" rel="noopener" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #F0DEE4; border-radius: 6px; padding: 28px 26px 24px; min-height: 240px; transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;" style-hover="transform: translateY(-4px); border-color: #E0607C; box-shadow: 0 14px 34px -18px rgba(193,75,104,0.4);">
+            <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #E0607C; letter-spacing: 0.06em;">{{ p.num }}</span>
+              <span style="font-size: 18px; color: #C9B2B9;">↗</span>
+            </div>
+            <h3 style="margin: 18px 0 10px; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.3;">{{ p.title }}</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #6B5F64; flex: 1; text-wrap: pretty;">{{ p.desc }}</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0 16px;">
+              <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #8A7E83; background: #FBF1F4; border: 1px solid #F2E2E7; padding: 4px 9px; border-radius: 4px;">{{ t }}</span>
+              </sc-for>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #B79FA7; border-top: 1px solid #F4E8EC; padding-top: 14px;">{{ p.repo }}</div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 논문 -->
+  <section id="publications" style="padding: clamp(90px, 11vh, 130px) 0; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">03 / Publications</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">논문</h2>
+        <div style="height: 1px; background: #EEE2E6; margin-top: 28px;"></div>
+      </div>
+      <div>
+        <sc-for list="{{ publications }}" as="pub" hint-placeholder-count="3">
+          <div style="display: grid; grid-template-columns: 96px 1fr; gap: clamp(16px, 3vw, 40px); padding: 32px 0; border-bottom: 1px solid #EEE2E6;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #E0607C; padding-top: 4px;">{{ pub.year }}</div>
+            <div>
+              <h3 style="margin: 0 0 10px; font-size: clamp(19px, 2vw, 25px); font-weight: 700; letter-spacing: -0.015em; line-height: 1.4;">{{ pub.title }}</h3>
+              <div style="font-size: 15px; color: #6B5F64; margin-bottom: 6px;">{{ pub.authors }}</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #9A8D92; font-style: normal;">{{ pub.venue }}</div>
+              <div style="display: flex; flex-wrap: wrap; gap: 18px; margin-top: 16px;">
+                <sc-for list="{{ pub.links }}" as="lk" hint-placeholder-count="2">
+                  <a href="{{ lk.href }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 5px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #1A1416; border-bottom: 1px solid #E0607C; padding-bottom: 2px;" style-hover="color: #E0607C;">{{ lk.label }} ↗</a>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 수상 -->
+  <section id="awards" style="padding: clamp(90px, 11vh, 130px) 0; background: #FFF6F8; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">04 / Awards</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">수상</h2>
+        <div style="height: 1px; background: #F0DEE4; margin-top: 28px;"></div>
+      </div>
+      <sc-for list="{{ awards }}" as="a" hint-placeholder-count="3">
+        <div style="display: grid; grid-template-columns: 96px 1fr auto; gap: clamp(14px, 3vw, 40px); align-items: baseline; padding: 26px 0; border-bottom: 1px solid #F0DEE4;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #E0607C;">{{ a.year }}</div>
+          <div>
+            <div style="font-size: clamp(18px, 2vw, 23px); font-weight: 700; letter-spacing: -0.015em;">{{ a.title }}</div>
+            <div style="font-size: 15px; color: #6B5F64; margin-top: 5px;">{{ a.org }}</div>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #B79FA7; text-align: right; white-space: nowrap;">{{ a.rank }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- # 활동 -->
+  <section id="activities" style="padding: clamp(90px, 11vh, 130px) 0; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">05 / Activities</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">활동</h2>
+        <div style="height: 1px; background: #EEE2E6; margin-top: 28px;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: #EEE2E6; border: 1px solid #EEE2E6;">
+        <sc-for list="{{ activities }}" as="ac" hint-placeholder-count="3">
+          <div style="background: #FFFFFF; padding: 30px 28px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #E0607C; margin-bottom: 14px;">{{ ac.year }}</div>
+            <div style="font-size: 19px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 10px;">{{ ac.title }}</div>
+            <div style="font-size: 15px; line-height: 1.65; color: #6B5F64; text-wrap: pretty;">{{ ac.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 학력 -->
+  <section id="education" style="padding: clamp(90px, 11vh, 130px) 0; background: #FFF6F8; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">06 / Education</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">학력</h2>
+        <div style="height: 1px; background: #F0DEE4; margin-top: 28px;"></div>
+      </div>
+      <sc-for list="{{ education }}" as="ed" hint-placeholder-count="2">
+        <div style="display: grid; grid-template-columns: 160px 1fr; gap: clamp(16px, 3vw, 40px); padding: 30px 0; border-bottom: 1px solid #F0DEE4;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #E0607C; padding-top: 4px;">{{ ed.period }}</div>
+          <div>
+            <div style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; letter-spacing: -0.02em;">{{ ed.school }}</div>
+            <div style="font-size: 16px; color: #5C5358; margin-top: 7px;">{{ ed.degree }}</div>
+            <div style="font-size: 15px; color: #8A7E83; margin-top: 8px; line-height: 1.6;">{{ ed.desc }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- # 자격증 -->
+  <section id="certificates" style="padding: clamp(90px, 11vh, 130px) 0; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="margin-bottom: 56px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #E0607C; margin-bottom: 14px;">07 / Certificates</div>
+        <h2 style="margin: 0; font-size: clamp(34px, 5vw, 60px); font-weight: 800; letter-spacing: -0.025em;">자격증</h2>
+        <div style="height: 1px; background: #EEE2E6; margin-top: 28px;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px;">
+        <sc-for list="{{ certificates }}" as="c" hint-placeholder-count="4">
+          <div style="border: 1px solid #EEE2E6; border-radius: 6px; padding: 24px 22px; background: #FFFFFF;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <span style="width: 30px; height: 30px; border-radius: 50%; background: #FBE7EC; display: inline-flex; align-items: center; justify-content: center; font-size: 13px;">✦</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #B79FA7;">{{ c.year }}</span>
+            </div>
+            <div style="font-size: 17px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.35;">{{ c.name }}</div>
+            <div style="font-size: 14px; color: #8A7E83; margin-top: 7px;">{{ c.org }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- # 연락처 -->
+  <section id="contact" style="background: #1A1416; color: #FFFFFF; padding: clamp(90px, 12vh, 140px) 0 56px; scroll-margin-top: 64px;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px);">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #F2879F; margin-bottom: 22px;">08 / Contact</div>
+      <h2 style="margin: 0; font-size: clamp(38px, 7vw, 88px); font-weight: 800; letter-spacing: -0.035em; line-height: 1.02;">함께 일해요</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px 28px; margin-top: 48px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <a href="https://github.com/chaechae18" target="_blank" rel="noopener" style="color: #C7BCC0;" style-hover="color: #F2879F;">GitHub ↗</a>
+        <span style="color: #4A4044;">/</span>
+        <a href="https://www.linkedin.com/in/채림-이-a54ab8302?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" style="color: #C7BCC0;" style-hover="color: #F2879F;">LinkedIn ↗</a>
+        <span style="color: #4A4044;">/</span>
+        <a href="/cdn-cgi/l/email-protection#137b767f7f7c53766b727e637f763d707c7e" style="color: #C7BCC0;" style-hover="color: #F2879F;">Email ↗</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A7E83;">
+        <span>© 2026 이채림 · Chaelim Lee</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+// # 데이터 (각 섹션에 들어가는 내용)
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      projects: [
+        { num: "01", title: "Medipaw", desc: "반려동물의 골든타임을 AI가 먼저 읽어내는 응급도 분류 및 동물병원 업무 자동화 플랫폼", tags: ["Python", "FastAPI","PostgreSQL", "Docker", "AWS"], repo: "github.com/medipaw", link: "https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN25-FINAL-1Team" },
+        { num: "02", title: "Boyak", desc: "독거 어르신의 약물 부작용, 병원비, 이동 장벽을 AI로 해결하는 맞춤형 시니어 헬스케어 서비스", tags: ["Python", "Next.js"], repo: "github.com/boyak", link: "https://github.com/Chyoung812/boyak" },
+        { num: "03", title: "조각집", desc: "개인의 기억을 저장하고, 소중한 사람들과 공유할 수 있는 웹 서비스", tags: ["React", "Node.js", "Express", "AWS"], repo: "github.com/CodeItBoost3", link: "https://github.com/CodeItBoost3" },
+        { num: "04", title: "성신여대 뭐 먹지?", desc: "성신여대 주변 맛집 탐방 및 리뷰 웹 서비스", tags: ["Python","MySQL", "AWS"], repo: "github.com/sungmumuk", link: "https://github.com/egggbeee-dev/sungmumuk" },
+        { num: "05", title: "SHIM", desc: "자신의 하루 식단에 대해 기록하며, 자신의 식단 점수를 통해 저속노화 일상화를 도움받을 수 있는 앱 서비스", tags: ["Java", "Flutter", "OpenCV"], repo: "github.com/shim", link: "https://github.com/shim-dev" },
+      ],
+      publications: [
+        { year: "2025", title: "Fic2Bot: A Scalable Framework for Persona-Driven Chatbot Generation from Fiction", authors: "Sua Kang, Chaelim Lee, Subin Jung, Minsu Lee", venue: "MDPI electronsics 2025", links: [{ label: "Link", href: "https://www.mdpi.com/2079-9292/14/19/3859" }] },
+        { year: "2025", title: "RAG와 프롬프팅을 활용한 세계관 확장형 캐릭터 챗봇", authors: "Sua Kang, Chaelim Lee, Subin Jung, Minsu Lee", venue: "KCC 2025", links: [{ label: "Link", href: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12318781" }] },
+      ],
+      awards: [
+        { year: "2025", title: "KCC2025 학부생/주니어 논문경진대회", org: "한국정보과학회", rank: "우수상" },
+        { year: "2025", title: "2025 IT경진대회", org: "성신여자대학교", rank: "장려상" },
+        { year: "2025", title: "2025 codeit boost 데모데이", org: "codeit", rank: "대상" },
+        { year: "2024", title: "2024 하계학기 글로벌 기업탐방", org: "성신여자대학교", rank: "대상" },
+      ],
+      activities: [
+        { year: "2025 — 2026", title: "SK Networks Family AI Camp", desc: "웹 개발, 데이터 분석부터 모델링 및 배포까지 학습" },
+        { year: "2025 — 2025", title: "ToI 동아리", desc: "IoT 센서 및 제어 로직 적용한 자율주행 모빌리티 제작" },
+        { year: "2024 — 2025", title: "창업 동아리", desc: "성신여자대학교 맛집 리뷰 사이트 '성뭐먹' 구현 및 운영" },
+        { year: "2024 — 2025", title: "AIM Lab", desc: "인공지능 연구실에서 연구 활동" },
+        { year: "2024 — 2025", title: "Codeit Boost", desc: "부트캠프형 동아리로 웹 개발 교육 및 데모데이 참가" },
+      ],
+      education: [
+        { period: "2024-2026", school: "성신여자대학교", degree: "AI융합학부 학사", desc: "학부연구생: AIM Lab(2024-2025.12)" },
+      ],
+      certificates: [
+        { year: "2026", name: "ADsP", org: "한국데이터산업진흥원" },
+        { year: "2023", name: "컴퓨터활용능력2급", org: "한국산업인력공단" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
